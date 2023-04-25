@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -35,6 +36,11 @@ fun HomeScreen() {
         Spacer(modifier = Modifier.width(8.dp))
         //Spacer(modifier = Modifier.weight(1f))
         Text(text = "Surname", fontSize = 20.sp)
+    }
+    Box(modifier = Modifier.padding(20.dp)) {
+        Text(text = "N", fontSize = 48.sp)
+        Text(text = "ame",
+        modifier = Modifier.align(BottomCenter))
     }
 }
 
