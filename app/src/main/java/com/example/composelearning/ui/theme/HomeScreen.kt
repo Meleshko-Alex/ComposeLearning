@@ -1,10 +1,7 @@
 package com.example.composelearning.ui.theme
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
@@ -14,12 +11,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun HomeScreen() {
     Column(
-
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom,
         modifier = Modifier
@@ -32,6 +29,12 @@ fun HomeScreen() {
             fontSize = 20.sp,
             modifier = Modifier.align(Start)
         )
+    }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(text = "Name", fontSize = 20.sp)
+        Spacer(modifier = Modifier.width(8.dp))
+        //Spacer(modifier = Modifier.weight(1f))
+        Text(text = "Surname", fontSize = 20.sp)
     }
 }
 
