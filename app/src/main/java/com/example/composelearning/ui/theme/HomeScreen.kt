@@ -37,7 +37,7 @@ fun HomeScreen() {
         //Spacer(modifier = Modifier.weight(1f))
         Text(text = "Surname", fontSize = 20.sp)
     }
-    Box(modifier = Modifier.padding(20.dp)) {
+    Box(modifier = Modifier.padding(top = 20.dp, start = 40.dp)) {
         Text(text = "N", fontSize = 48.sp)
         Text(text = "ame",
         modifier = Modifier.align(BottomCenter))
@@ -51,7 +51,7 @@ fun HomeScreenPreview() {
 }
 
 @Composable
-fun Text() {
+fun TextBlock() {
     Text(
         text = "Home Screen",
         fontSize = 32.sp,
