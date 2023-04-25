@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposeLearning</string>
+    <string name="empty_string">Empty Screen</string>
 </resources>

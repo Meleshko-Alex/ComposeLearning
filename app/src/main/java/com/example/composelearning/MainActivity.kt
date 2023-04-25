@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             //HomeScreen()
-            ListScreen(listOf("one", "two", "three"))
+            ListScreen(listOf())
         }
     }
 }
