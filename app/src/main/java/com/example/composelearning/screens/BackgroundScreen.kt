@@ -1,6 +1,7 @@
 package com.example.composelearning.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -40,6 +41,11 @@ fun BackgroundScreen() {
                     shape = RoundedCornerShape(16.dp),
                     alpha = .6f
                 )
+        )
+        Box(modifier = Modifier
+            .width(160.dp).height(120.dp)
+            .align(Alignment.TopCenter)
+            .border(width = 2.dp, color = Color.Green, shape = RoundedCornerShape(16.dp))
         )
     }
 }
