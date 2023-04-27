@@ -3,6 +3,7 @@ package com.example.composelearning
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.mutableStateOf
 import com.example.composelearning.screens.BackgroundScreen
 import com.example.composelearning.screens.ImageAndIconScreen
 import com.example.composelearning.screens.StateScreen
@@ -12,14 +13,15 @@ import com.example.composelearning.ui.theme.ListScreen
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val counter = mutableStateOf(0)
+
         setContent {
             //HomeScreen()
             //ListScreen(listOf())
             //BackgroundScreen()
             //ImageAndIconScreen()
 
-            var count = 0
-            StateScreen(count, onCounterClick = {count++})
+            StateScreen(count = counter, onCounterClick = {counter.value++})
         }
     }
 }
