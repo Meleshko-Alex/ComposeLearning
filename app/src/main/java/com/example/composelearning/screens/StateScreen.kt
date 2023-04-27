@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Checkbox
+import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
@@ -16,7 +17,9 @@ fun StateScreen(
     count: State<Int>,
     onCounterClick: () -> Unit,
     checked: State<Boolean>,
-    onCheckedChange: (Boolean) -> Unit
+    onCheckedChange: (Boolean) -> Unit,
+    text: State<String>,
+    onTextChange: (String) -> Unit
 ) {
 
     Column {
@@ -33,5 +36,7 @@ fun StateScreen(
                 modifier = Modifier.clickable(onClick = {onCheckedChange(!checked.value)})
             )
         }
+        
+        OutlinedTextField(value = text.value, onValueChange = onTextChange)
     }
 }

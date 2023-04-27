@@ -15,6 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val counter = mutableStateOf(0)
         val checked = mutableStateOf(true)
+        val text = mutableStateOf("hint")
 
         setContent {
             //HomeScreen()
@@ -26,7 +27,9 @@ class MainActivity : ComponentActivity() {
                 count = counter,
                 onCounterClick = { counter.value++ },
                 checked = checked,
-                onCheckedChange = {newCheckedValue ->  checked.value = newCheckedValue})
+                onCheckedChange = { newCheckedValue -> checked.value = newCheckedValue },
+                text = text,
+                onTextChange = { newText -> text.value = newText })
         }
     }
 }
