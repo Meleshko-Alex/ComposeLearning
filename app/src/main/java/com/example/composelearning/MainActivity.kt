@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.example.composelearning.screens.BackgroundScreen
 import com.example.composelearning.screens.ImageAndIconScreen
+import com.example.composelearning.screens.StateScreen
 import com.example.composelearning.ui.theme.HomeScreen
 import com.example.composelearning.ui.theme.ListScreen
 
@@ -15,7 +16,10 @@ class MainActivity : ComponentActivity() {
             //HomeScreen()
             //ListScreen(listOf())
             //BackgroundScreen()
-            ImageAndIconScreen()
+            //ImageAndIconScreen()
+
+            var count = 0
+            StateScreen(count, onCounterClick = {count++})
         }
     }
 }
