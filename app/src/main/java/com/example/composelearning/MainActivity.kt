@@ -14,6 +14,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val counter = mutableStateOf(0)
+        val checked = mutableStateOf(true)
 
         setContent {
             //HomeScreen()
@@ -21,7 +22,11 @@ class MainActivity : ComponentActivity() {
             //BackgroundScreen()
             //ImageAndIconScreen()
 
-            StateScreen(count = counter, onCounterClick = {counter.value++})
+            StateScreen(
+                count = counter,
+                onCounterClick = { counter.value++ },
+                checked = checked,
+                onCheckedChange = {newCheckedValue ->  checked.value = newCheckedValue})
         }
     }
 }
