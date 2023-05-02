@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.mutableStateOf
 import com.example.composelearning.screens.BackgroundScreen
+import com.example.composelearning.screens.ClickCounterScreen
 import com.example.composelearning.screens.ImageAndIconScreen
 import com.example.composelearning.screens.StateScreen
 import com.example.composelearning.ui.theme.HomeScreen
@@ -23,13 +24,15 @@ class MainActivity : ComponentActivity() {
             //BackgroundScreen()
             //ImageAndIconScreen()
 
-            StateScreen(
+            /*StateScreen(
                 count = counter,
                 onCounterClick = { counter.value++ },
                 checked = checked,
                 onCheckedChange = { newCheckedValue -> checked.value = newCheckedValue },
                 text = text,
-                onTextChange = { newText -> text.value = newText })
+                onTextChange = { newText -> text.value = newText })*/
+
+            ClickCounterScreen(countValue = counter.value, onCounterClick = { counter.value++ })
         }
     }
 }
