@@ -10,10 +10,12 @@ import com.example.composelearning.data.EvenOdd
 
 @Composable
 fun ClickCounterScreen(
+    isUppercase: Boolean,
     countValue: Int,
     onCounterClick: () -> Unit
 ) {
-    val evenOdd = remember { EvenOdd() }
+    //val evenOdd = remember { EvenOdd() }
+    val evenOdd = remember(isUppercase) { EvenOdd(isUppercase) }
 
     Text(
         text = "Clicks = $countValue is ${evenOdd.check(countValue)}",

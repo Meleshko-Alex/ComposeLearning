@@ -32,7 +32,10 @@ class MainActivity : ComponentActivity() {
                 text = text,
                 onTextChange = { newText -> text.value = newText })*/
 
-            ClickCounterScreen(countValue = counter.value, onCounterClick = { counter.value++ })
+            ClickCounterScreen(
+                isUppercase = true,
+                countValue = counter.value,
+                onCounterClick = { counter.value++ })
         }
     }
 }

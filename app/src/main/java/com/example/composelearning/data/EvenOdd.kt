@@ -1,7 +1,8 @@
 package com.example.composelearning.data
 
-class EvenOdd() {
+class EvenOdd(private val isUppercase: Boolean) {
     fun check(value: Int): String {
-        return if (value % 2 == 0) "even" else "odd"
+        val result = if (value % 2 == 0) "even" else "odd"
+        return if (isUppercase) result.uppercase() else result
     }
 }
